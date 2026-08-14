@@ -1,0 +1,693 @@
+09:19:23 **** Build of configuration Debug for project AvoidanceCollisionSystem_FSBL ****
+make -j12 all 
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_cortex.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_cortex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_cortex.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_dma.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_dma_ex.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma_ex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma_ex.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_exti.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_exti.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_exti.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_exti.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_gpio.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_gpio.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_gpio.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_pwr.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_pwr_ex.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr_ex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_rcc.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_rcc_ex.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc_ex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc_ex.o"
+arm-none-eabi-gcc -mcpu=cortex-m55 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32n657x0hxq_fsbl.d" -MT"Core/Startup/startup_stm32n657x0hxq_fsbl.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32n657x0hxq_fsbl.o" "../Core/Startup/startup_stm32n657x0hxq_fsbl.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32n6xx_hal_msp.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/stm32n6xx_hal_msp.d" -MT"Core/Src/stm32n6xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32n6xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32n6xx_it.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/stm32n6xx_it.d" -MT"Core/Src/stm32n6xx_it.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32n6xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32n6xx_fsbl.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/system_stm32n6xx_fsbl.d" -MT"Core/Src/system_stm32n6xx_fsbl.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32n6xx_fsbl.o"
+arm-none-eabi-gcc -o "AvoidanceCollisionSystem_FSBL.elf" @"objects.list"   -mcpu=cortex-m55 -T"C:\Users\gdnoriega\Documents\ACAS_Xu_WorkSpace\AvoidanceCollisionSystem\FSBL\STM32N657X0HXQ_AXISRAM2_fsbl.ld" --specs=nosys.specs -Wl,-Map="AvoidanceCollisionSystem_FSBL.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AvoidanceCollisionSystem_FSBL.elf
+ 
+arm-none-eabi-size  AvoidanceCollisionSystem_FSBL.elf 
+arm-none-eabi-objdump -h -S AvoidanceCollisionSystem_FSBL.elf  > "AvoidanceCollisionSystem_FSBL.list"
+arm-none-eabi-objcopy  -O binary AvoidanceCollisionSystem_FSBL.elf  "AvoidanceCollisionSystem_FSBL.bin"
+   text	   data	    bss	    dec	    hex	filename
+  13700	     12	   2596	  16308	   3fb4	AvoidanceCollisionSystem_FSBL.elf
+Finished building: default.size.stdout
+ 
+Finished building: AvoidanceCollisionSystem_FSBL.bin
+Finished building: AvoidanceCollisionSystem_FSBL.list
+ 
+ 
+09:19:32 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_FSBL ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_FSBL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13700	     12	   2596	  16308	   3fb4	AvoidanceCollisionSystem_FSBL.elf
+Finished building: default.size.stdout
+ 
+09:20:01 **** Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/adsb_driver/adsb_driver.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/adsb_driver/adsb_driver.d" -MT"Drivers/adsb_driver/adsb_driver.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/adsb_driver/adsb_driver.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_cortex.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_cortex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_cortex.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_dma.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_dma_ex.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma_ex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_dma_ex.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_exti.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_exti.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_exti.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_exti.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_gpio.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_gpio.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_gpio.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_pwr.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_pwr_ex.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr_ex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_rcc.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_rcc_ex.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc_ex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_rif.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rif.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rif.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_rif.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_uart.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_uart.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_uart.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_uart.o"
+arm-none-eabi-gcc "C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Drivers/STM32N6xx_HAL_Driver/Src/stm32n6xx_hal_uart_ex.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_uart_ex.d" -MT"Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_uart_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32N6xx_HAL_Driver/stm32n6xx_hal_uart_ex.o"
+arm-none-eabi-gcc -mcpu=cortex-m55 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32n657x0hxq.d" -MT"Core/Startup/startup_stm32n657x0hxq.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32n657x0hxq.o" "../Core/Startup/startup_stm32n657x0hxq.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/secure_nsc.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/secure_nsc.d" -MT"Core/Src/secure_nsc.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/secure_nsc.o"
+arm-none-eabi-gcc "../Core/Src/stm32n6xx_hal_msp.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/stm32n6xx_hal_msp.d" -MT"Core/Src/stm32n6xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32n6xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32n6xx_it.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/stm32n6xx_it.d" -MT"Core/Src/stm32n6xx_it.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32n6xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32n6xx_s.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/system_stm32n6xx_s.d" -MT"Core/Src/system_stm32n6xx_s.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32n6xx_s.o"
+arm-none-eabi-gcc -o "AvoidanceCollisionSystem_Appli.elf" @"objects.list"   -mcpu=cortex-m55 -T"C:\Users\gdnoriega\Documents\ACAS_Xu_WorkSpace\AvoidanceCollisionSystem\Appli\STM32N657X0HXQ_LRUN.ld" --specs=nosys.specs -Wl,-Map="AvoidanceCollisionSystem_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: AvoidanceCollisionSystem_Appli.elf has a LOAD segment with RWX permissions
+Finished building target: AvoidanceCollisionSystem_Appli.elf
+ 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+arm-none-eabi-objdump -h -S AvoidanceCollisionSystem_Appli.elf  > "AvoidanceCollisionSystem_Appli.list"
+arm-none-eabi-objcopy  -O binary AvoidanceCollisionSystem_Appli.elf  "AvoidanceCollisionSystem_Appli.bin"
+   text	   data	    bss	    dec	    hex	filename
+  51460	     96	   3184	  54740	   d5d4	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+Finished building: AvoidanceCollisionSystem_Appli.bin
+ 
+Finished building: AvoidanceCollisionSystem_Appli.list
+ 
+09:20:08 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51460	     96	   3184	  54740	   d5d4	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+09:24:39 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "AvoidanceCollisionSystem_Appli.elf" @"objects.list"   -mcpu=cortex-m55 -T"C:\Users\gdnoriega\Documents\ACAS_Xu_WorkSpace\AvoidanceCollisionSystem\Appli\STM32N657X0HXQ_LRUN.ld" --specs=nosys.specs -Wl,-Map="AvoidanceCollisionSystem_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: AvoidanceCollisionSystem_Appli.elf has a LOAD segment with RWX permissions
+Finished building target: AvoidanceCollisionSystem_Appli.elf
+ 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+arm-none-eabi-objdump -h -S AvoidanceCollisionSystem_Appli.elf  > "AvoidanceCollisionSystem_Appli.list"
+arm-none-eabi-objcopy  -O binary AvoidanceCollisionSystem_Appli.elf  "AvoidanceCollisionSystem_Appli.bin"
+   text	   data	    bss	    dec	    hex	filename
+  56888	     96	  37560	  94544	  17150	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+Finished building: AvoidanceCollisionSystem_Appli.bin
+ 
+Finished building: AvoidanceCollisionSystem_Appli.list
+ 
+09:26:40 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/adsb_driver/adsb_driver.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/adsb_driver/adsb_driver.d" -MT"Drivers/adsb_driver/adsb_driver.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/adsb_driver/adsb_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "AvoidanceCollisionSystem_Appli.elf" @"objects.list"   -mcpu=cortex-m55 -T"C:\Users\gdnoriega\Documents\ACAS_Xu_WorkSpace\AvoidanceCollisionSystem\Appli\STM32N657X0HXQ_LRUN.ld" --specs=nosys.specs -Wl,-Map="AvoidanceCollisionSystem_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: AvoidanceCollisionSystem_Appli.elf has a LOAD segment with RWX permissions
+Finished building target: AvoidanceCollisionSystem_Appli.elf
+ 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+arm-none-eabi-objdump -h -S AvoidanceCollisionSystem_Appli.elf  > "AvoidanceCollisionSystem_Appli.list"
+arm-none-eabi-objcopy  -O binary AvoidanceCollisionSystem_Appli.elf  "AvoidanceCollisionSystem_Appli.bin"
+   text	   data	    bss	    dec	    hex	filename
+  56880	     96	  37072	  94048	  16f60	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+Finished building: AvoidanceCollisionSystem_Appli.bin
+ 
+Finished building: AvoidanceCollisionSystem_Appli.list
+ 
+15:37:46 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:153:48: error: assignment to 'uint8_t' {aka 'unsigned char'} from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  153 |                                   sendFrame[0] = "90";
+      |                                                ^
+../Core/Src/main.c:154:48: error: assignment to 'uint8_t' {aka 'unsigned char'} from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  154 |                                   sendFrame[1] = "FF";
+      |                                                ^
+../Core/Src/main.c:155:48: error: assignment to 'uint8_t' {aka 'unsigned char'} from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  155 |                                   sendFrame[2] = "FF";
+      |                                                ^
+../Core/Src/main.c:156:48: error: assignment to 'uint8_t' {aka 'unsigned char'} from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  156 |                                   sendFrame[3] = "FF";
+      |                                                ^
+../Core/Src/main.c:157:48: error: assignment to 'uint8_t' {aka 'unsigned char'} from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  157 |                                   sendFrame[4] = "BD";
+      |                                                ^
+../Core/Src/main.c:164:49: error: assignment to 'uint8_t' {aka 'unsigned char'} from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  164 |                                   sendFrame[11] = "00";
+      |                                                 ^
+../Core/Src/main.c:165:49: error: assignment to 'uint8_t' {aka 'unsigned char'} from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  165 |                                   sendFrame[12] = "00";
+      |                                                 ^
+../Core/Src/main.c:166:49: error: assignment to 'uint8_t' {aka 'unsigned char'} from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  166 |                                   sendFrame[13] = "00";
+      |                                                 ^
+../Core/Src/main.c:167:49: error: assignment to 'uint8_t' {aka 'unsigned char'} from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  167 |                                   sendFrame[14] = "\n";
+      |                                                 ^
+../Core/Src/main.c:123:11: warning: variable 'SystemState' set but not used [-Wunused-but-set-variable]
+  123 |   uint8_t SystemState = 0;
+      |           ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+15:40:51 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:123:11: warning: variable 'SystemState' set but not used [-Wunused-but-set-variable]
+  123 |   uint8_t SystemState = 0;
+      |           ^~~~~~~~~~~
+arm-none-eabi-gcc -o "AvoidanceCollisionSystem_Appli.elf" @"objects.list"   -mcpu=cortex-m55 -T"C:\Users\gdnoriega\Documents\ACAS_Xu_WorkSpace\AvoidanceCollisionSystem\Appli\STM32N657X0HXQ_LRUN.ld" --specs=nosys.specs -Wl,-Map="AvoidanceCollisionSystem_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: AvoidanceCollisionSystem_Appli.elf has a LOAD segment with RWX permissions
+Finished building target: AvoidanceCollisionSystem_Appli.elf
+ 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+arm-none-eabi-objdump -h -S AvoidanceCollisionSystem_Appli.elf  > "AvoidanceCollisionSystem_Appli.list"
+arm-none-eabi-objcopy  -O binary AvoidanceCollisionSystem_Appli.elf  "AvoidanceCollisionSystem_Appli.bin"
+   text	   data	    bss	    dec	    hex	filename
+  57220	     96	  37072	  94388	  170b4	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+Finished building: AvoidanceCollisionSystem_Appli.bin
+ 
+Finished building: AvoidanceCollisionSystem_Appli.list
+ 
+15:41:28 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57220	     96	  37072	  94388	  170b4	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+15:42:55 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:123:11: warning: variable 'SystemState' set but not used [-Wunused-but-set-variable]
+  123 |   uint8_t SystemState = 0;
+      |           ^~~~~~~~~~~
+arm-none-eabi-gcc -o "AvoidanceCollisionSystem_Appli.elf" @"objects.list"   -mcpu=cortex-m55 -T"C:\Users\gdnoriega\Documents\ACAS_Xu_WorkSpace\AvoidanceCollisionSystem\Appli\STM32N657X0HXQ_LRUN.ld" --specs=nosys.specs -Wl,-Map="AvoidanceCollisionSystem_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: AvoidanceCollisionSystem_Appli.elf has a LOAD segment with RWX permissions
+Finished building target: AvoidanceCollisionSystem_Appli.elf
+ 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+arm-none-eabi-objdump -h -S AvoidanceCollisionSystem_Appli.elf  > "AvoidanceCollisionSystem_Appli.list"
+arm-none-eabi-objcopy  -O binary AvoidanceCollisionSystem_Appli.elf  "AvoidanceCollisionSystem_Appli.bin"
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37072	  94404	  170c4	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+Finished building: AvoidanceCollisionSystem_Appli.bin
+ 
+Finished building: AvoidanceCollisionSystem_Appli.list
+ 
+17:42:13 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37072	  94404	  170c4	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+17:42:33 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37072	  94404	  170c4	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+17:54:09 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37072	  94404	  170c4	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+08:05:39 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37072	  94404	  170c4	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+08:07:35 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/adsb_driver/adsb_driver.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/adsb_driver/adsb_driver.d" -MT"Drivers/adsb_driver/adsb_driver.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/adsb_driver/adsb_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:123:11: warning: variable 'SystemState' set but not used [-Wunused-but-set-variable]
+  123 |   uint8_t SystemState = 0;
+      |           ^~~~~~~~~~~
+arm-none-eabi-gcc -o "AvoidanceCollisionSystem_Appli.elf" @"objects.list"   -mcpu=cortex-m55 -T"C:\Users\gdnoriega\Documents\ACAS_Xu_WorkSpace\AvoidanceCollisionSystem\Appli\STM32N657X0HXQ_LRUN.ld" --specs=nosys.specs -Wl,-Map="AvoidanceCollisionSystem_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: AvoidanceCollisionSystem_Appli.elf has a LOAD segment with RWX permissions
+Finished building target: AvoidanceCollisionSystem_Appli.elf
+ 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+arm-none-eabi-objdump -h -S AvoidanceCollisionSystem_Appli.elf  > "AvoidanceCollisionSystem_Appli.list"
+arm-none-eabi-objcopy  -O binary AvoidanceCollisionSystem_Appli.elf  "AvoidanceCollisionSystem_Appli.bin"
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37160	  94492	  1711c	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+Finished building: AvoidanceCollisionSystem_Appli.bin
+ 
+Finished building: AvoidanceCollisionSystem_Appli.list
+ 
+08:09:37 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37160	  94492	  1711c	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+08:10:41 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/adsb_driver/adsb_driver.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/adsb_driver/adsb_driver.d" -MT"Drivers/adsb_driver/adsb_driver.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/adsb_driver/adsb_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:123:11: warning: variable 'SystemState' set but not used [-Wunused-but-set-variable]
+  123 |   uint8_t SystemState = 0;
+      |           ^~~~~~~~~~~
+arm-none-eabi-gcc -o "AvoidanceCollisionSystem_Appli.elf" @"objects.list"   -mcpu=cortex-m55 -T"C:\Users\gdnoriega\Documents\ACAS_Xu_WorkSpace\AvoidanceCollisionSystem\Appli\STM32N657X0HXQ_LRUN.ld" --specs=nosys.specs -Wl,-Map="AvoidanceCollisionSystem_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: AvoidanceCollisionSystem_Appli.elf has a LOAD segment with RWX permissions
+Finished building target: AvoidanceCollisionSystem_Appli.elf
+ 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+arm-none-eabi-objdump -h -S AvoidanceCollisionSystem_Appli.elf  > "AvoidanceCollisionSystem_Appli.list"
+arm-none-eabi-objcopy  -O binary AvoidanceCollisionSystem_Appli.elf  "AvoidanceCollisionSystem_Appli.bin"
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37160	  94492	  1711c	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+Finished building: AvoidanceCollisionSystem_Appli.bin
+ 
+Finished building: AvoidanceCollisionSystem_Appli.list
+ 
+08:19:01 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/adsb_driver/adsb_driver.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/adsb_driver/adsb_driver.d" -MT"Drivers/adsb_driver/adsb_driver.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/adsb_driver/adsb_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:123:11: warning: variable 'SystemState' set but not used [-Wunused-but-set-variable]
+  123 |   uint8_t SystemState = 0;
+      |           ^~~~~~~~~~~
+arm-none-eabi-gcc -o "AvoidanceCollisionSystem_Appli.elf" @"objects.list"   -mcpu=cortex-m55 -T"C:\Users\gdnoriega\Documents\ACAS_Xu_WorkSpace\AvoidanceCollisionSystem\Appli\STM32N657X0HXQ_LRUN.ld" --specs=nosys.specs -Wl,-Map="AvoidanceCollisionSystem_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: AvoidanceCollisionSystem_Appli.elf has a LOAD segment with RWX permissions
+Finished building target: AvoidanceCollisionSystem_Appli.elf
+ 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+arm-none-eabi-objdump -h -S AvoidanceCollisionSystem_Appli.elf  > "AvoidanceCollisionSystem_Appli.list"
+arm-none-eabi-objcopy  -O binary AvoidanceCollisionSystem_Appli.elf  "AvoidanceCollisionSystem_Appli.bin"
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37160	  94492	  1711c	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+Finished building: AvoidanceCollisionSystem_Appli.bin
+ 
+Finished building: AvoidanceCollisionSystem_Appli.list
+ 
+08:19:31 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37160	  94492	  1711c	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+08:21:40 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32n6xx_hal_msp.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/stm32n6xx_hal_msp.d" -MT"Core/Src/stm32n6xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32n6xx_hal_msp.o"
+arm-none-eabi-gcc -o "AvoidanceCollisionSystem_Appli.elf" @"objects.list"   -mcpu=cortex-m55 -T"C:\Users\gdnoriega\Documents\ACAS_Xu_WorkSpace\AvoidanceCollisionSystem\Appli\STM32N657X0HXQ_LRUN.ld" --specs=nosys.specs -Wl,-Map="AvoidanceCollisionSystem_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: AvoidanceCollisionSystem_Appli.elf has a LOAD segment with RWX permissions
+Finished building target: AvoidanceCollisionSystem_Appli.elf
+ 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+arm-none-eabi-objdump -h -S AvoidanceCollisionSystem_Appli.elf  > "AvoidanceCollisionSystem_Appli.list"
+arm-none-eabi-objcopy  -O binary AvoidanceCollisionSystem_Appli.elf  "AvoidanceCollisionSystem_Appli.bin"
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37160	  94492	  1711c	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+Finished building: AvoidanceCollisionSystem_Appli.bin
+ 
+Finished building: AvoidanceCollisionSystem_Appli.list
+ 
+08:25:48 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/adsb_driver/adsb_driver.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/adsb_driver/adsb_driver.d" -MT"Drivers/adsb_driver/adsb_driver.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/adsb_driver/adsb_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:123:11: warning: variable 'SystemState' set but not used [-Wunused-but-set-variable]
+  123 |   uint8_t SystemState = 0;
+      |           ^~~~~~~~~~~
+arm-none-eabi-gcc -o "AvoidanceCollisionSystem_Appli.elf" @"objects.list"   -mcpu=cortex-m55 -T"C:\Users\gdnoriega\Documents\ACAS_Xu_WorkSpace\AvoidanceCollisionSystem\Appli\STM32N657X0HXQ_LRUN.ld" --specs=nosys.specs -Wl,-Map="AvoidanceCollisionSystem_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: AvoidanceCollisionSystem_Appli.elf has a LOAD segment with RWX permissions
+Finished building target: AvoidanceCollisionSystem_Appli.elf
+ 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+arm-none-eabi-objdump -h -S AvoidanceCollisionSystem_Appli.elf  > "AvoidanceCollisionSystem_Appli.list"
+arm-none-eabi-objcopy  -O binary AvoidanceCollisionSystem_Appli.elf  "AvoidanceCollisionSystem_Appli.bin"
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37160	  94492	  1711c	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+Finished building: AvoidanceCollisionSystem_Appli.bin
+ 
+Finished building: AvoidanceCollisionSystem_Appli.list
+ 
+08:35:53 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37160	  94492	  1711c	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+08:57:39 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37160	  94492	  1711c	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+08:58:44 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/adsb_driver/adsb_driver.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/adsb_driver/adsb_driver.d" -MT"Drivers/adsb_driver/adsb_driver.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/adsb_driver/adsb_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:94:1: warning: statement with no effect [-Wunused-value]
+   94 | 28  HAL_Init();
+      | ^~
+../Core/Src/main.c:94:3: error: expected ';' before 'HAL_Init'
+   94 | 28  HAL_Init();
+      |   ^ ~~~~~~~~
+      |   ;
+../Core/Src/main.c:123:11: warning: variable 'SystemState' set but not used [-Wunused-but-set-variable]
+  123 |   uint8_t SystemState = 0;
+      |           ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+08:59:47 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:123:11: warning: variable 'SystemState' set but not used [-Wunused-but-set-variable]
+  123 |   uint8_t SystemState = 0;
+      |           ^~~~~~~~~~~
+arm-none-eabi-gcc -o "AvoidanceCollisionSystem_Appli.elf" @"objects.list"   -mcpu=cortex-m55 -T"C:\Users\gdnoriega\Documents\ACAS_Xu_WorkSpace\AvoidanceCollisionSystem\Appli\STM32N657X0HXQ_LRUN.ld" --specs=nosys.specs -Wl,-Map="AvoidanceCollisionSystem_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: AvoidanceCollisionSystem_Appli.elf has a LOAD segment with RWX permissions
+Finished building target: AvoidanceCollisionSystem_Appli.elf
+ 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+arm-none-eabi-objdump -h -S AvoidanceCollisionSystem_Appli.elf  > "AvoidanceCollisionSystem_Appli.list"
+arm-none-eabi-objcopy  -O binary AvoidanceCollisionSystem_Appli.elf  "AvoidanceCollisionSystem_Appli.bin"
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37160	  94492	  1711c	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+Finished building: AvoidanceCollisionSystem_Appli.bin
+ 
+Finished building: AvoidanceCollisionSystem_Appli.list
+ 
+09:01:17 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37160	  94492	  1711c	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+09:03:13 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37160	  94492	  1711c	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+09:03:37 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37160	  94492	  1711c	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+10:05:56 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37160	  94492	  1711c	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+10:07:51 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37160	  94492	  1711c	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+10:46:43 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57236	     96	  37160	  94492	  1711c	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+10:58:27 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/adsb_driver/adsb_driver.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/adsb_driver/adsb_driver.d" -MT"Drivers/adsb_driver/adsb_driver.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/adsb_driver/adsb_driver.o"
+arm-none-eabi-gcc -o "AvoidanceCollisionSystem_Appli.elf" @"objects.list"   -mcpu=cortex-m55 -T"C:\Users\gdnoriega\Documents\ACAS_Xu_WorkSpace\AvoidanceCollisionSystem\Appli\STM32N657X0HXQ_LRUN.ld" --specs=nosys.specs -Wl,-Map="AvoidanceCollisionSystem_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: AvoidanceCollisionSystem_Appli.elf has a LOAD segment with RWX permissions
+Finished building target: AvoidanceCollisionSystem_Appli.elf
+ 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+arm-none-eabi-objdump -h -S AvoidanceCollisionSystem_Appli.elf  > "AvoidanceCollisionSystem_Appli.list"
+arm-none-eabi-objcopy  -O binary AvoidanceCollisionSystem_Appli.elf  "AvoidanceCollisionSystem_Appli.bin"
+   text	   data	    bss	    dec	    hex	filename
+  57216	     96	  37160	  94472	  17108	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+Finished building: AvoidanceCollisionSystem_Appli.bin
+ 
+Finished building: AvoidanceCollisionSystem_Appli.list
+ 
+11:06:19 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57216	     96	  37160	  94472	  17108	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+11:06:42 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57216	     96	  37160	  94472	  17108	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+11:07:44 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57216	     96	  37160	  94472	  17108	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+11:09:20 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/adsb_driver/adsb_driver.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/adsb_driver/adsb_driver.d" -MT"Drivers/adsb_driver/adsb_driver.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/adsb_driver/adsb_driver.o"
+arm-none-eabi-gcc -o "AvoidanceCollisionSystem_Appli.elf" @"objects.list"   -mcpu=cortex-m55 -T"C:\Users\gdnoriega\Documents\ACAS_Xu_WorkSpace\AvoidanceCollisionSystem\Appli\STM32N657X0HXQ_LRUN.ld" --specs=nosys.specs -Wl,-Map="AvoidanceCollisionSystem_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: AvoidanceCollisionSystem_Appli.elf has a LOAD segment with RWX permissions
+Finished building target: AvoidanceCollisionSystem_Appli.elf
+ 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+arm-none-eabi-objdump -h -S AvoidanceCollisionSystem_Appli.elf  > "AvoidanceCollisionSystem_Appli.list"
+arm-none-eabi-objcopy  -O binary AvoidanceCollisionSystem_Appli.elf  "AvoidanceCollisionSystem_Appli.bin"
+   text	   data	    bss	    dec	    hex	filename
+  57216	     96	  37160	  94472	  17108	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+Finished building: AvoidanceCollisionSystem_Appli.bin
+ 
+Finished building: AvoidanceCollisionSystem_Appli.list
+ 
+11:12:44 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57216	     96	  37160	  94472	  17108	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+11:13:36 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57216	     96	  37160	  94472	  17108	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+11:14:08 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57216	     96	  37160	  94472	  17108	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+11:18:14 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57216	     96	  37160	  94472	  17108	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+11:19:23 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57216	     96	  37160	  94472	  17108	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+11:20:30 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57216	     96	  37160	  94472	  17108	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+11:22:53 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57216	     96	  37160	  94472	  17108	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+11:24:37 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/adsb_driver/adsb_driver.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/adsb_driver/adsb_driver.d" -MT"Drivers/adsb_driver/adsb_driver.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/adsb_driver/adsb_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:123:11: warning: variable 'SystemState' set but not used [-Wunused-but-set-variable]
+  123 |   uint8_t SystemState = 0;
+      |           ^~~~~~~~~~~
+arm-none-eabi-gcc -o "AvoidanceCollisionSystem_Appli.elf" @"objects.list"   -mcpu=cortex-m55 -T"C:\Users\gdnoriega\Documents\ACAS_Xu_WorkSpace\AvoidanceCollisionSystem\Appli\STM32N657X0HXQ_LRUN.ld" --specs=nosys.specs -Wl,-Map="AvoidanceCollisionSystem_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: AvoidanceCollisionSystem_Appli.elf has a LOAD segment with RWX permissions
+Finished building target: AvoidanceCollisionSystem_Appli.elf
+ 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+arm-none-eabi-objdump -h -S AvoidanceCollisionSystem_Appli.elf  > "AvoidanceCollisionSystem_Appli.list"
+arm-none-eabi-objcopy  -O binary AvoidanceCollisionSystem_Appli.elf  "AvoidanceCollisionSystem_Appli.bin"
+   text	   data	    bss	    dec	    hex	filename
+  57216	     96	  37176	  94488	  17118	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+Finished building: AvoidanceCollisionSystem_Appli.bin
+ 
+Finished building: AvoidanceCollisionSystem_Appli.list
+ 
+11:25:08 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+   text	   data	    bss	    dec	    hex	filename
+  57216	     96	  37176	  94488	  17118	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+11:57:37 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/adsb_driver/adsb_driver.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/adsb_driver/adsb_driver.d" -MT"Drivers/adsb_driver/adsb_driver.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/adsb_driver/adsb_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Drivers/adsb_driver/adsb_driver.c: In function 'ADSB_FramingAndSend':
+../Drivers/adsb_driver/adsb_driver.c:305:22: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  305 |                 pMsg = HarcodedLUT[i];
+      |                      ^
+../Drivers/adsb_driver/adsb_driver.c:309:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  309 |         pMsg = hex_to_ascii((Heading >> 8) & 0x0F);
+      |              ^
+../Drivers/adsb_driver/adsb_driver.c:311:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  311 |         pMsg = hex_to_ascii((Heading & 0xFE) | (LatLongBit & 0x01));
+      |              ^
+../Drivers/adsb_driver/adsb_driver.c:313:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  313 |         pMsg = hex_to_ascii((OneAxisPosition >> 24) & 0xFF);
+      |              ^
+../Drivers/adsb_driver/adsb_driver.c:315:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  315 |         pMsg = hex_to_ascii((OneAxisPosition >> 16) & 0xFF);
+      |              ^
+../Drivers/adsb_driver/adsb_driver.c:317:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  317 |         pMsg = hex_to_ascii((OneAxisPosition >> 8) & 0xFF);
+      |              ^
+../Drivers/adsb_driver/adsb_driver.c:319:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  319 |         pMsg = hex_to_ascii((OneAxisPosition) & 0xFF);
+      |              ^
+../Drivers/adsb_driver/adsb_driver.c:325:30: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  325 |                         pMsg = HarcodedCRC2[i];
+      |                              ^
+../Drivers/adsb_driver/adsb_driver.c:332:30: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  332 |                         pMsg = HarcodedCRC2[i];
+      |                              ^
+../Drivers/adsb_driver/adsb_driver.c:301:17: warning: unused variable 'HarcodedCRC1' [-Wunused-variable]
+  301 |         uint8_t HarcodedCRC1[] = "966C0F";
+      |                 ^~~~~~~~~~~~
+make: *** [Drivers/adsb_driver/subdir.mk:19: Drivers/adsb_driver/adsb_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:154:63: error: passing argument 1 of 'ADSB_FramingAndSend' makes pointer from integer without a cast [-Wint-conversion]
+  154 |                                           ADSB_FramingAndSend(Heading, LatLongBit, OneAxisPosition);
+      |                                                               ^~~~~~~
+      |                                                               |
+      |                                                               uint16_t {aka short unsigned int}
+In file included from ../Core/Src/main.c:27:
+C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver/adsb_driver.h:440:36: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint16_t' {aka 'short unsigned int'}
+  440 | void ADSB_FramingAndSend(uint8_t * pMsg, uint16_t Heading, uint8_t LatLongBit, uint32_t OneAxisPosition);
+      |                          ~~~~~~~~~~^~~~
+../Core/Src/main.c:154:43: error: too few arguments to function 'ADSB_FramingAndSend'
+  154 |                                           ADSB_FramingAndSend(Heading, LatLongBit, OneAxisPosition);
+      |                                           ^~~~~~~~~~~~~~~~~~~
+C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver/adsb_driver.h:440:6: note: declared here
+  440 | void ADSB_FramingAndSend(uint8_t * pMsg, uint16_t Heading, uint8_t LatLongBit, uint32_t OneAxisPosition);
+      |      ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:123:11: warning: unused variable 'SystemState' [-Wunused-variable]
+  123 |   uint8_t SystemState = 0;
+      |           ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+11:59:04 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+make -j12 all 
+arm-none-eabi-gcc "../Drivers/adsb_driver/adsb_driver.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/adsb_driver/adsb_driver.d" -MT"Drivers/adsb_driver/adsb_driver.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/adsb_driver/adsb_driver.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Drivers/adsb_driver/adsb_driver.c: In function 'ADSB_FramingAndSend':
+../Drivers/adsb_driver/adsb_driver.c:305:22: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  305 |                 pMsg = HarcodedLUT[i];
+      |                      ^
+../Drivers/adsb_driver/adsb_driver.c:309:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  309 |         pMsg = hex_to_ascii((Heading >> 8) & 0x0F);
+      |              ^
+../Drivers/adsb_driver/adsb_driver.c:311:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  311 |         pMsg = hex_to_ascii((Heading & 0xFE) | (LatLongBit & 0x01));
+      |              ^
+../Drivers/adsb_driver/adsb_driver.c:313:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  313 |         pMsg = hex_to_ascii((OneAxisPosition >> 24) & 0xFF);
+      |              ^
+../Drivers/adsb_driver/adsb_driver.c:315:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  315 |         pMsg = hex_to_ascii((OneAxisPosition >> 16) & 0xFF);
+      |              ^
+../Drivers/adsb_driver/adsb_driver.c:317:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  317 |         pMsg = hex_to_ascii((OneAxisPosition >> 8) & 0xFF);
+      |              ^
+../Drivers/adsb_driver/adsb_driver.c:319:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  319 |         pMsg = hex_to_ascii((OneAxisPosition) & 0xFF);
+      |              ^
+../Drivers/adsb_driver/adsb_driver.c:325:30: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  325 |                         pMsg = HarcodedCRC2[i];
+      |                              ^
+../Drivers/adsb_driver/adsb_driver.c:332:30: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
+  332 |                         pMsg = HarcodedCRC2[i];
+      |                              ^
+../Drivers/adsb_driver/adsb_driver.c:301:17: warning: unused variable 'HarcodedCRC1' [-Wunused-variable]
+  301 |         uint8_t HarcodedCRC1[] = "966C0F";
+      |                 ^~~~~~~~~~~~
+make: *** [Drivers/adsb_driver/subdir.mk:19: Drivers/adsb_driver/adsb_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:123:11: warning: unused variable 'SystemState' [-Wunused-variable]
+  123 |   uint8_t SystemState = 0;
+      |           ^~~~~~~~~~~
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
