@@ -1,0 +1,23 @@
+# --- Directorios de compilación y salida (Build Output) ---
+Debug/
+Release/
+build/
+bin/
+obj/
+
+# --- Metadatos y archivos de usuario de STM32CubeIDE / Eclipse ---
+# Mantén .cproject y .project, pero ignora los archivos de estado específicos del workspace o usuario
+.settings/
+*.launch
+*.pydevproject
+.pydevproject
+.metadata/
+RemoteSystemsTempFiles/
+Generated_Code/
+
+# --- Archivos temporales del sistema operativo ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
