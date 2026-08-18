@@ -295,47 +295,6 @@ uint8_t hex_to_ascii(uint8_t value)
     else{return 0xFF;}
 }
 
-void ADSB_FramingAndSend(uint8_t * pMsg, uint16_t Heading, uint8_t LatLongBit, uint32_t OneAxisPosition)
-{
-	uint8_t HarcodedLUT[] = "90FFFFFFB";
-	uint8_t HarcodedCRC1[] = "966C0F";
-	uint8_t HarcodedCRC2[] = "C09BBE";
-	for (int i = 0 ; i < 9; i++)
-	{
-		pMsg = HarcodedLUT[i];
-		pMsg++;
-	}
-
-	pMsg = hex_to_ascii((Heading >> 8) & 0x0F);
-	pMsg++;
-	pMsg = hex_to_ascii((Heading & 0xFE) | (LatLongBit & 0x01));
-	pMsg++;
-	pMsg = hex_to_ascii((OneAxisPosition >> 24) & 0xFF);
-	pMsg++;
-	pMsg = hex_to_ascii((OneAxisPosition >> 16) & 0xFF);
-	pMsg++;
-	pMsg = hex_to_ascii((OneAxisPosition >> 8) & 0xFF);
-	pMsg++;
-	pMsg = hex_to_ascii((OneAxisPosition) & 0xFF);
-
-	if(LatLongBit)
-	{
-		for (int i = 0 ; i < 6; i++)
-		{
-			pMsg = HarcodedCRC2[i];
-			pMsg++;
-		}
-	}else
-	{
-		for (int i = 0 ; i < 6; i++)
-		{
-			pMsg = HarcodedCRC1[i];
-			pMsg++;
-		}
-	}
-
-}
-
 
 /******************************************************************************************************************************************************************************
  * @fn                    - Binary2Gray
@@ -753,7 +712,6 @@ ADSB_LocationByICAO ADSB_RingBuffer_PopCPRFrame(ADSB_RngBuff_CPR *RingBuffer)
 	RingBuffer->status = RGBFF_READY;
 	return CPR_Data;
 }
-
 /******************************************************************************************************************************************************************************
  * @fn					- ADSB_FindValidFrame
  *
@@ -775,34 +733,14 @@ ADSB_FrameStatus ADSB_FindValidFrame(ADSB_RGBuffer_t * pRingBuff)
 		ADSB_MovFwd(pRingBuff);
 
 		uint32_t temp_index = pRingBuff->index;
-
-		while (pRingBuff->buffer[pRingBuff->index] != ';' /* && ADSB_KeepLooking()*/)
-		{
-			if ((pRingBuff->index - temp_index) > FRAME_SZ+1)
-			{
-				validFrameFlg = FRAME_OUT_OF_RANGE;
-				return validFrameFlg;
-			}
-			ADSB_MovFwd(pRingBuff);
-		}
-
-		if((pRingBuff->index - temp_index) != FRAME_SZ)
-		{
-			validFrameFlg = INVALID_LENGHT;
-			return validFrameFlg;
-		}else
+		uint16_t temp_DF = (pRingBuff->buffer[pRingBuff->index]) >> 3 ;
+		ADSB_MovFwd(pRingBuff);
+		if (ADSB_validateDF(temp_DF))
 		{
 			pRingBuff->index = temp_index;
-			uint16_t temp_DF = (ascii_to_hex(pRingBuff->buffer[pRingBuff->index])) << 4 ;
-			ADSB_MovFwd(pRingBuff);
-			temp_DF |= ascii_to_hex(pRingBuff->buffer[pRingBuff->index]);
-			temp_DF = temp_DF >> 3;
-			if (ADSB_validateDF(temp_DF))
-			{
-				pRingBuff->index = temp_index;
-				validFrameFlg = VALID_FRAME;
-			}
+			validFrameFlg = VALID_FRAME;
 		}
+
 	}
 
 	return validFrameFlg;
@@ -817,10 +755,7 @@ ADSB_FrameStatus ADSB_FindValidFrame(ADSB_RGBuffer_t * pRingBuff)
  ******************************************************************************************************************************************************************************/
 uint8_t ADSB_Get_Instant_DF(uint8_t* pBuff)
 {
-	uint8_t tempData = (ascii_to_hex(*pBuff)) << 4;
-	pBuff++;
-	tempData |=  ascii_to_hex(*pBuff);
-	tempData = tempData >> 3;
+	uint8_t tempData = (*pBuff) >> 3;
 	return tempData;
 }
 
@@ -834,8 +769,7 @@ uint8_t ADSB_Get_Instant_DF(uint8_t* pBuff)
  *****************************************************************************************************************************************************************************/
 uint8_t ADSB_Get_Instant_CA(uint8_t* pBuff)
 {
-	uint8_t tempData = ascii_to_hex(*pBuff);
-	tempData &= ~(1 << 3);
+	uint8_t tempData = *pBuff & 0x07;
 	return tempData;
 }
 
@@ -850,9 +784,9 @@ uint8_t ADSB_Get_Instant_CA(uint8_t* pBuff)
 uint32_t ADSB_Get_Instant_ICAOAdd(uint8_t* pBuff)
 {
 	uint32_t tempData = 0;
-	for (int i = 20 ; i >= 0 ; i -= 4)
+	for (int i = 2; i >= 0 ; i--)
 	{
-		tempData |= (ascii_to_hex(*pBuff) << i);
+		tempData |= (*pBuff << i*8);
 		pBuff++;
 	}
 	return tempData;
@@ -869,10 +803,7 @@ uint32_t ADSB_Get_Instant_ICAOAdd(uint8_t* pBuff)
  ******************************************************************************************************************************************************************************/
 uint8_t ADSB_Get_Instant_TC(uint8_t* pBuff)
 {
-	uint8_t tempData = (ascii_to_hex(*pBuff)) << 4;
-	pBuff++;
-	tempData |=  ascii_to_hex(*pBuff);
-	tempData = tempData >> 3;
+	uint8_t tempData = (*pBuff) >> 3;
 	return tempData;
 }
 
@@ -888,9 +819,9 @@ uint8_t ADSB_Get_Instant_TC(uint8_t* pBuff)
 uint64_t ADSB_Get_Instant_ME(uint8_t* pBuff)
 {
 	uint64_t tempData = 0;
-	for (int i = 52 ; i >= 0 ; i -= 4)
+	for (int i = 6 ; i >= 0 ; i--)
 	{
-		tempData |= ((uint64_t)(ascii_to_hex(*pBuff)) << i);
+		tempData |= ((uint64_t)*pBuff) << i*8;
 		pBuff++;
 	}
 	return tempData;
@@ -908,9 +839,9 @@ uint64_t ADSB_Get_Instant_ME(uint8_t* pBuff)
 uint32_t ADSB_Get_Instant_PI(uint8_t* pBuff)
 {
 	uint32_t tempData = 0;
-	for (int i = 20 ; i >= 0 ; i -= 4)
+	for (int i = 2 ; i >=0 ; i--)
 	{
-		tempData |= (ascii_to_hex(*pBuff) << i);
+		tempData |= (*pBuff << i*8);
 		pBuff++;
 	}
 	return tempData;
@@ -961,16 +892,15 @@ ADSB_FrameStruct ADSB_DecodeFrame(ADSB_RGBuffer_t * pRingBuff, uint32_t timeStam
 	ADSB_FrameStruct tempFrame = {0};
 
 	tempFrame.DownlinkFormat = ADSB_Get_Instant_DF(&pRingBuff->buffer[pRingBuff->index]);
-	ADSB_MovFwd(pRingBuff);
 	tempFrame.Capability = ADSB_Get_Instant_CA(&pRingBuff->buffer[pRingBuff->index]);
 	ADSB_MovFwd(pRingBuff);
 	tempFrame.ICAOAddress = ADSB_Get_Instant_ICAOAdd(&pRingBuff->buffer[pRingBuff->index]);
-	for(int i = 0; i < 6 ; i++) ADSB_MovFwd(pRingBuff);
+	for(int i = 0; i < 3 ; i++) ADSB_MovFwd(pRingBuff);
 	tempFrame.TypeCode = ADSB_Get_Instant_TC(&pRingBuff->buffer[pRingBuff->index]);
 	tempFrame.Message = ADSB_Get_Instant_ME(&pRingBuff->buffer[pRingBuff->index]);
-	for(int i = 0; i < 14 ; i++) ADSB_MovFwd(pRingBuff);
+	for(int i = 0; i < 7 ; i++) ADSB_MovFwd(pRingBuff);
 	tempFrame.Parity = ADSB_Get_Instant_PI(&pRingBuff->buffer[pRingBuff->index]);
-	for(int i = 0; i < 6 ; i++) ADSB_MovFwd(pRingBuff);
+	for(int i = 0; i < 3 ; i++) ADSB_MovFwd(pRingBuff);
 	tempFrame.Status = VALID_FRAME;
 
 	if ((tempFrame.TypeCode >= 20 && tempFrame.TypeCode <= 22) || (tempFrame.TypeCode >= 9 && tempFrame.TypeCode <= 18) || (tempFrame.TypeCode >= 5 && tempFrame.TypeCode <= 8))
@@ -2375,6 +2305,36 @@ ADSB_FrameStruct ADSB_Read_DownlinkFormatBuffer(uint16_t downlinkFormatSelected)
 		tempFrame.Status = EMPTY_FRAME;
 	}
 	return tempFrame;
+}
+
+uint32_t ADSB_CalculateCRC24(const uint8_t *data, uint32_t numDataBits)
+{
+    uint32_t crc = 0;
+    uint32_t totalBits = numDataBits + 24; // se procesan 24 bits extra en cero (padding del propio CRC)
+
+    for (uint32_t i = 0; i < totalBits; i++)
+    {
+        uint8_t bit;
+
+        if (i < numDataBits)
+        {
+            uint32_t byteIdx = i / 8;
+            uint8_t  bitIdx  = 7 - (i % 8);
+            bit = (data[byteIdx] >> bitIdx) & 0x01;
+        }
+        else
+        {
+            bit = 0; // bits de padding
+        }
+
+        uint8_t msb = (crc >> 23) & 0x01;
+        crc = ((crc << 1) | bit) & 0xFFFFFF;
+
+        if (msb)
+            crc ^= MODES_CRC24_POLY;
+    }
+
+    return crc & 0xFFFFFF;
 }
 
 

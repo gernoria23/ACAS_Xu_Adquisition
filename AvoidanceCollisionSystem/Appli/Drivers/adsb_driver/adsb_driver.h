@@ -26,6 +26,8 @@
  *
  *****************************************************************************/
 
+#define MODES_CRC24_POLY 						0xFFF409  		// Generador Mode S (24 bits)
+
 #define RX_BUFF_SZ 								128 /*!<  Specifies the size of the Ring Buffer for the UARTRx comming from DMA*/
 
 #define FRAME_SZ								28  /*!<  Specifies the size of ADSB Frames (probably would change)*/
@@ -274,6 +276,19 @@ typedef struct
     ADSB_FlagStatus Status;        /*!< Status indicating validity or availability of the CPR data */
 } ADSB_LocationByICAO;
 
+
+typedef struct
+{
+	uint32_t ICAOAddres;
+	uint32_t latitude;
+	uint32_t longitude;
+	uint32_t bearing;
+	uint8_t SystemState;
+	uint8_t ReadyFlag;
+	uint32_t TimeStamp;
+
+} ADSB_TC23_MessageStruct;
+
 /******************************************************************************************************************************************************************************
  * @struct                - ADSB_RngBuff_CPR
  *
@@ -293,6 +308,26 @@ typedef struct
     uint32_t index;                    /*!< Current parsing or access index within the buffer */
     ADSB_RingBuffStatus status;        /*!< Current operational status of the CPR ring buffer */
 } ADSB_RngBuff_CPR;
+
+/******************************************************************************************************************************************************************************
+ * @struct                - ADSB_RngBuff_CPR
+ *
+ * @brief                - Defines a ring buffer structure for storing ADS-B CPR location frames
+ *
+ * @Note                - This ring buffer is used to manage Even or Odd CPR frames independently,
+ *                          enabling time-correlated pairing and global CPR position decoding.
+ *
+ *****************************************************************************************************************************************************************************/
+typedef struct
+{
+    ADSB_LocationByICAO *buffer;    /*!< Pointer to the buffer holding CPR location entries */
+    uint32_t capacity;                /*!< Maximum number of CPR frames the buffer can hold */
+    uint32_t head;                    /*!< Head index for CPR frame insertion */
+    uint32_t tail;                    /*!< Tail index for CPR frame retrieval */
+    uint32_t count;                    /*!< Current number of CPR frames stored */
+    uint32_t index;                    /*!< Current parsing or access index within the buffer */
+    ADSB_RingBuffStatus status;        /*!< Current operational status of the CPR ring buffer */
+} ADSB_RngBuff_TC23;
 
 /******************************************************************************************************************************************************************************
  *
@@ -434,9 +469,6 @@ uint8_t ADSB_ParseMessage_AirOpStat_GetOM2(uint64_t ME);
 uint8_t ADSB_ParseMessage_AirOpStat_GetOM1(uint64_t ME);
 
 
-
-
-
-void ADSB_FramingAndSend(uint8_t * pMsg, uint16_t Heading, uint8_t LatLongBit, uint32_t OneAxisPosition);
+uint32_t ADSB_CalculateCRC24(const uint8_t *data, uint32_t numDataBits);
 
 #endif /* ADSB_DRIVER_ADSB_DRIVER_H_ */

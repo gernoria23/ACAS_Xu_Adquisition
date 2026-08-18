@@ -31,10 +31,48 @@
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
 
+
+typedef enum {
+    POS_STATUS_EMPTY    = 0x00,
+    POS_LAT_LOADED       = 0x01,
+    POS_LON_LOADED       = 0x02,
+    POS_READY            = (POS_LAT_LOADED | POS_LON_LOADED)
+} PositionStatus_t;
+
+typedef struct {
+    uint32_t ICAOAddress;
+    PositionStatus_t status;
+    int32_t latitude;
+    int32_t longitude;
+    uint32_t timestamp_lat;
+    uint32_t timestamp_lon;
+    uint16_t Course;
+    uint8_t SystemState;
+} Position_t;
+
+typedef struct {
+    uint8_t  DownlinkFormat;   // 5 bits
+    uint8_t  Capability;       // 3 bits
+    uint32_t ICAO;             // 24 bits
+    uint8_t  TC;                // 5 bits
+    uint8_t  SystemState;      // 3 bits
+    uint8_t  Reserved;         // 3 bits
+    uint16_t Course;           // 12 bits
+    uint8_t  LatLongBit;       // 1 bit
+    uint32_t OneAxisPosition;  // 32 bits
+    uint32_t ParityCRC;        // 24 bits
+} ADSB_CustomFrame_t;
+
+
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
+#define MAX_TRACKED_AIRCRAFT 32
+
+#define ADSB_FRAME_BYTES  14   // 112 bits / 8
+#define ADSB_PACKET_BYTES 15   // + 1 byte de '*'
 
 /* USER CODE END PD */
 
@@ -62,6 +100,11 @@ ADSB_StatusTypedef adsbflagStatus = ADSB_EMPTY;
 
 uint8_t StartParsingFlag = 0;
 
+volatile uint8_t user_button_flag = 0;
+uint32_t last_tick = 0;
+
+Position_t g_positions[MAX_TRACKED_AIRCRAFT];
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -71,6 +114,11 @@ static void MX_USART1_UART_Init(void);
 static void MX_USART2_UART_Init(void);
 static void SystemIsolation_Config(void);
 /* USER CODE BEGIN PFP */
+
+void Ask4Intruder(void);
+Position_t* Position_FindOrCreate(uint32_t icao);
+
+void ADSB_PackCustomFrame(const ADSB_CustomFrame_t *frame, uint8_t *outPacket);
 
 /* USER CODE END PFP */
 
@@ -120,13 +168,14 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  uint8_t SystemState = 0;
-  uint16_t Heading = 0;
-  uint8_t LatLongBit = -1;
-  uint32_t OneAxisPosition = 0;
 
   while (1)
   {
+	  if (user_button_flag)
+	  {
+		  Ask4Intruder();
+
+	  }
 
 	  if (adsbflagStatus != ADSB_EMPTY)
 	  {
@@ -143,25 +192,63 @@ int main(void)
 		  {
 			  if (tempFrame.TypeCode == 23)
 			  {
-				  Heading = (tempFrame.Message >> 33) & 0x0FFF;
-				  LatLongBit = (tempFrame.Message >> 32) & 0x01;
-				  OneAxisPosition = (tempFrame.Message) & 0xFFFFFFFF;
+				    Position_t *pos = Position_FindOrCreate(tempFrame.ICAOAddress);
 
-				  if (tempFrame.ICAOAddress == 0xffffff)
-				  {
-					  uint8_t sendFrame[32] = {0};
+				    uint32_t now = HAL_GetTick();
+				    uint8_t isOdd = (tempFrame.Message >> 32) & 0x01;
 
-					  ADSB_FramingAndSend(sendFrame, Heading, LatLongBit, OneAxisPosition);
+				    if (isOdd)
+				    {
+				    	pos->Course = (tempFrame.Message >> 33) & 0x0FFF;
+				    	pos->SystemState = (tempFrame.Message >> 48) & 0x07;
+				        pos->latitude = tempFrame.Message & 0xFFFF;
+				        pos->status |= POS_LAT_LOADED;
+				        pos->timestamp_lat = now;
+				    }
+				    else
+				    {
+				    	pos->Course = (tempFrame.Message >> 33) & 0x0FFF;
+				    	pos->SystemState = (tempFrame.Message >> 48) & 0x07;
+				        pos->longitude = tempFrame.Message & 0xFFFF;
+				        pos->status |= POS_LON_LOADED;
+				        pos->timestamp_lon = now;
+				    }
 
-	                  HAL_UART_Transmit(&huart1, sendFrame, 32, HAL_MAX_DELAY);
-				  }
+				    if ((pos->status & POS_READY) == POS_READY)
+				    {
+				        pos->status = POS_STATUS_EMPTY; // reset para el próximo par
+
+				        uint8_t txOdd[ADSB_PACKET_BYTES];
+				        uint8_t txEven[ADSB_PACKET_BYTES];
+
+				        ADSB_CustomFrame_t frameOdd  = {0};
+				        ADSB_CustomFrame_t frameEven = {0};
+
+				        frameOdd.DownlinkFormat  = frameEven.DownlinkFormat  = 18;
+				        frameOdd.Capability      = frameEven.Capability      = 0;
+				        frameOdd.ICAO            = frameEven.ICAO            = pos->ICAOAddress;
+				        frameOdd.TC               = frameEven.TC               = tempFrame.TypeCode;
+				        frameOdd.SystemState     = frameEven.SystemState     = pos->SystemState;
+				        frameOdd.Course          = frameEven.Course          = pos->Course;
+
+				        frameOdd.LatLongBit      = 1;
+				        frameOdd.OneAxisPosition = pos->latitude;
+
+				        frameEven.LatLongBit      = 0;
+				        frameEven.OneAxisPosition = pos->longitude;
+
+				        ADSB_PackCustomFrame(&frameOdd,  txOdd);   // CRC calculado adentro
+				        ADSB_PackCustomFrame(&frameEven, txEven);
+
+				        HAL_UART_Transmit(&huart1, txOdd,  ADSB_PACKET_BYTES, HAL_MAX_DELAY);
+				        HAL_UART_Transmit(&huart1, txEven, ADSB_PACKET_BYTES, HAL_MAX_DELAY);
+				    }
 			  }
 		  }
 
 		  StartParsingFlag = 0;
 
 	  }
-
 
     /* USER CODE END WHILE */
 
@@ -236,8 +323,6 @@ static void MX_GPDMA1_Init(void)
   }
 
   /* set up GPIO configuration */
-  HAL_GPIO_ConfigPinAttributes(GPIOA,GPIO_PIN_10,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
-  HAL_GPIO_ConfigPinAttributes(GPIOA,GPIO_PIN_11,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
   HAL_GPIO_ConfigPinAttributes(GPIOB,GPIO_PIN_0,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
   HAL_GPIO_ConfigPinAttributes(GPIOB,GPIO_PIN_3,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
   HAL_GPIO_ConfigPinAttributes(GPIOB,GPIO_PIN_6,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
@@ -246,6 +331,7 @@ static void MX_GPDMA1_Init(void)
   HAL_GPIO_ConfigPinAttributes(GPIOB,GPIO_PIN_11,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
   HAL_GPIO_ConfigPinAttributes(GPIOC,GPIO_PIN_1,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
   HAL_GPIO_ConfigPinAttributes(GPIOC,GPIO_PIN_2,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
+  HAL_GPIO_ConfigPinAttributes(GPIOC,GPIO_PIN_13,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
   HAL_GPIO_ConfigPinAttributes(GPIOD,GPIO_PIN_5,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
   HAL_GPIO_ConfigPinAttributes(GPIOE,GPIO_PIN_3,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
   HAL_GPIO_ConfigPinAttributes(GPIOE,GPIO_PIN_5,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
@@ -364,6 +450,7 @@ static void MX_USART2_UART_Init(void)
   */
 static void MX_GPIO_Init(void)
 {
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
   /* USER CODE BEGIN MX_GPIO_Init_1 */
 
   /* USER CODE END MX_GPIO_Init_1 */
@@ -372,6 +459,23 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOE_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
+
+  /*Configure GPIO pin : USER_BTN_Pin */
+  GPIO_InitStruct.Pin = USER_BTN_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(USER_BTN_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PA10 UCPD1_VSENSE_Pin */
+  GPIO_InitStruct.Pin = GPIO_PIN_10|UCPD1_VSENSE_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(USER_BTN_EXTI_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(USER_BTN_EXTI_IRQn);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 
@@ -395,6 +499,162 @@ void HAL_UART_RxHalfCpltCallback (UART_HandleTypeDef *phuart)
 		adsbflagStatus = ADSB_HFULL;
 	}
 }
+
+void HAL_GPIO_EXTI_Rising_Callback (uint16_t GPIO_Pin)
+{
+	if (GPIO_Pin == USER_BTN_Pin)
+	{
+		uint32_t current_tick = HAL_GetTick();
+		if ((current_tick - last_tick) > 200)
+		{
+			last_tick = current_tick;
+			user_button_flag = 1;
+		}
+	}
+}
+
+void Ask4Intruder(void)
+{
+
+	  uint8_t TypeCode = 24;
+	  uint16_t Heading = 0;
+	  uint32_t Time2Impact = 70000000;
+
+	  uint8_t msg[7] = {0};
+
+	  msg[0] = (TypeCode << 3);
+	  msg[1] = (Heading >> 8) & 0xFF;
+	  msg[2] = (Heading & 0xFF);
+	  msg[3] = (Time2Impact >> 24) & 0xFF;
+	  msg[4] = (Time2Impact >> 16) & 0xFF;
+	  msg[5] = (Time2Impact >> 8) & 0xFF;
+	  msg[6] = (Time2Impact & 0xFF);
+
+
+	  uint16_t DownlinkFormat = 18;
+	  uint8_t Capability = 0;
+	  uint32_t ICAO = 0x100001;
+
+	  uint8_t data[11] = {0};
+
+	  data[0] = ((DownlinkFormat << 3) & 0xF8) | (Capability & 0x07);
+	  data[1] = (ICAO >> 16) & 0xFF;
+	  data[2] = (ICAO >> 8) & 0xFF;
+	  data[3] = ICAO & 0xFF;
+
+	  for(int i = 4 ; i <= 11 ; i++)
+	  {
+		  data[i] = msg[i-4];
+	  }
+
+	  // --- Adaptación del cálculo de CRC a C ---
+	  int len_bytes = 11;
+	  int total_bits = len_bytes * 8;
+
+	  // Usamos uint64_t ya que el registro desplaza más de 32 bits (11*8 + 24 = 112 bits,
+	  // pero para procesar bit a bit de forma eficiente en C se suele usar una rutina basada en bytes o un acumulador).
+	  // Implementación directa equivalente al script de Python:
+
+	  uint64_t reg = 0;
+	  for(int i = 0; i < len_bytes; i++) {
+		  reg = (reg << 8) | data[i];
+	  }
+
+	  uint64_t poly = 0x1FFF409ULL;
+
+	  int shift_amount = total_bits;
+	  poly = poly << shift_amount;
+
+	  for(int i = total_bits + 24 - 1; i >= 24; i--) {
+	      if(reg & (1ULL << i)) {
+	          reg ^= poly;
+	      }
+	      poly >>= 1; // En cada paso bajamos el polinomio en lugar de recalcular el shift completo
+	  }
+
+	  uint32_t crc = (uint32_t)reg; // Los 24 bits resultantes del CRC
+
+	  uint8_t frame[15] = {0};
+
+	  frame[0] = '*';
+
+	  for (int i = 0 ; i <= 11 ; i++)
+	  {
+		 frame[i+1] = data[i];
+	  }
+
+	  for (int i = 0 ; i < 3; i++) frame[i + 12] = (crc >> (8*(2-i)));
+
+
+	  HAL_UART_Transmit(&huart2, frame, 15, HAL_MAX_DELAY);
+	  HAL_Delay(125);
+
+	  user_button_flag = 0;
+}
+
+Position_t* Position_FindOrCreate(uint32_t icao)
+{
+    // Buscar existente
+    for (int i = 0; i < MAX_TRACKED_AIRCRAFT; i++)
+    {
+        if (g_positions[i].ICAOAddress == icao)
+            return &g_positions[i];
+    }
+    // No existe: buscar slot vacío
+    for (int i = 0; i < MAX_TRACKED_AIRCRAFT; i++)
+    {
+        if (g_positions[i].status == POS_STATUS_EMPTY && g_positions[i].ICAOAddress == 0)
+        {
+            g_positions[i].ICAOAddress = icao;
+            return &g_positions[i];
+        }
+    }
+    return NULL; // tabla llena
+}
+
+static void PackBits(uint8_t *buf, uint32_t *bitPos, uint32_t value, uint8_t numBits)
+{
+    for (int i = numBits - 1; i >= 0; i--)
+    {
+        uint8_t bit    = (value >> i) & 0x01;
+        uint32_t byteIdx = *bitPos / 8;
+        uint8_t  bitIdx  = 7 - (*bitPos % 8); // bit 7 = MSB del byte
+
+        if (bit)
+            buf[byteIdx] |= (uint8_t)(1u << bitIdx);
+        else
+            buf[byteIdx] &= (uint8_t)~(1u << bitIdx);
+
+        (*bitPos)++;
+    }
+}
+
+void ADSB_PackCustomFrame(const ADSB_CustomFrame_t *frame, uint8_t *outPacket)
+{
+    outPacket[0] = '*';
+    uint8_t *payload = &outPacket[1];
+    memset(payload, 0, ADSB_FRAME_BYTES);
+
+    uint32_t bitPos = 0;
+
+    PackBits(payload, &bitPos, frame->DownlinkFormat,  5);
+    PackBits(payload, &bitPos, frame->Capability,      3);
+    PackBits(payload, &bitPos, frame->ICAO,            24);
+    PackBits(payload, &bitPos, frame->TC,              5);
+    PackBits(payload, &bitPos, frame->SystemState,     3);
+    PackBits(payload, &bitPos, frame->Reserved,        3);
+    PackBits(payload, &bitPos, frame->Course,          12);
+    PackBits(payload, &bitPos, frame->LatLongBit,      1);
+    PackBits(payload, &bitPos, frame->OneAxisPosition, 32);
+
+    // bitPos aquí == 88. Calculamos el CRC sobre esos primeros 88 bits (11 bytes)
+    uint32_t crc = ADSB_CalculateCRC24(payload, bitPos);
+
+    PackBits(payload, &bitPos, crc, 24);
+}
+
+
+
 /* USER CODE END 4 */
 
 /**

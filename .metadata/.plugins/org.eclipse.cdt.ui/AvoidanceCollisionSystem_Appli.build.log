@@ -1,45 +1,21 @@
-11:59:04 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
+17:08:53 **** Incremental Build of configuration Debug for project AvoidanceCollisionSystem_Appli ****
 make -j12 all 
-arm-none-eabi-gcc "../Drivers/adsb_driver/adsb_driver.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Drivers/adsb_driver/adsb_driver.d" -MT"Drivers/adsb_driver/adsb_driver.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/adsb_driver/adsb_driver.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m55 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -c -I../Core/Inc -I../../Secure_nsclib -I../../Drivers/STM32N6xx_HAL_Driver/Inc -I../../Drivers/CMSIS/Device/ST/STM32N6xx/Include -I../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Include -I"C:/Users/gdnoriega/Documents/ACAS_Xu_WorkSpace/AvoidanceCollisionSystem/Appli/Drivers/adsb_driver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Drivers/adsb_driver/adsb_driver.c: In function 'ADSB_FramingAndSend':
-../Drivers/adsb_driver/adsb_driver.c:305:22: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
-  305 |                 pMsg = HarcodedLUT[i];
-      |                      ^
-../Drivers/adsb_driver/adsb_driver.c:309:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
-  309 |         pMsg = hex_to_ascii((Heading >> 8) & 0x0F);
-      |              ^
-../Drivers/adsb_driver/adsb_driver.c:311:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
-  311 |         pMsg = hex_to_ascii((Heading & 0xFE) | (LatLongBit & 0x01));
-      |              ^
-../Drivers/adsb_driver/adsb_driver.c:313:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
-  313 |         pMsg = hex_to_ascii((OneAxisPosition >> 24) & 0xFF);
-      |              ^
-../Drivers/adsb_driver/adsb_driver.c:315:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
-  315 |         pMsg = hex_to_ascii((OneAxisPosition >> 16) & 0xFF);
-      |              ^
-../Drivers/adsb_driver/adsb_driver.c:317:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
-  317 |         pMsg = hex_to_ascii((OneAxisPosition >> 8) & 0xFF);
-      |              ^
-../Drivers/adsb_driver/adsb_driver.c:319:14: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
-  319 |         pMsg = hex_to_ascii((OneAxisPosition) & 0xFF);
-      |              ^
-../Drivers/adsb_driver/adsb_driver.c:325:30: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
-  325 |                         pMsg = HarcodedCRC2[i];
-      |                              ^
-../Drivers/adsb_driver/adsb_driver.c:332:30: error: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'uint8_t' {aka 'unsigned char'} makes pointer from integer without a cast [-Wint-conversion]
-  332 |                         pMsg = HarcodedCRC2[i];
-      |                              ^
-../Drivers/adsb_driver/adsb_driver.c:301:17: warning: unused variable 'HarcodedCRC1' [-Wunused-variable]
-  301 |         uint8_t HarcodedCRC1[] = "966C0F";
-      |                 ^~~~~~~~~~~~
-make: *** [Drivers/adsb_driver/subdir.mk:19: Drivers/adsb_driver/adsb_driver.o] Error 1
-make: *** Waiting for unfinished jobs....
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:123:11: warning: unused variable 'SystemState' [-Wunused-variable]
-  123 |   uint8_t SystemState = 0;
-      |           ^~~~~~~~~~~
-"make -j12 all" terminated with exit code 2. Build might be incomplete.
+arm-none-eabi-gcc -o "AvoidanceCollisionSystem_Appli.elf" @"objects.list"   -mcpu=cortex-m55 -T"C:\Users\gdnoriega\Documents\ACAS_Xu_WorkSpace\AvoidanceCollisionSystem\Appli\STM32N657X0HXQ_LRUN.ld" --specs=nosys.specs -Wl,-Map="AvoidanceCollisionSystem_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: warning: AvoidanceCollisionSystem_Appli.elf has a LOAD segment with RWX permissions
+Finished building target: AvoidanceCollisionSystem_Appli.elf
+ 
+arm-none-eabi-size  AvoidanceCollisionSystem_Appli.elf 
+arm-none-eabi-objdump -h -S AvoidanceCollisionSystem_Appli.elf  > "AvoidanceCollisionSystem_Appli.list"
+arm-none-eabi-objcopy  -O binary AvoidanceCollisionSystem_Appli.elf  "AvoidanceCollisionSystem_Appli.bin"
+   text	   data	    bss	    dec	    hex	filename
+  58820	     96	  38072	  96988	  17adc	AvoidanceCollisionSystem_Appli.elf
+Finished building: default.size.stdout
+ 
+Finished building: AvoidanceCollisionSystem_Appli.bin
+ 
+Finished building: AvoidanceCollisionSystem_Appli.list
+ 
 
-11:59:06 Build Failed. 11 errors, 2 warnings. (took 1s.39ms)
+17:08:55 Build Finished. 0 errors, 1 warnings. (took 1s.796ms)
 

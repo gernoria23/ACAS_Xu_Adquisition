@@ -95,8 +95,6 @@ void Error_Handler(void);
 #define JTDI_GPIO_Port GPIOA
 #define SWCLK_Pin GPIO_PIN_14
 #define SWCLK_GPIO_Port GPIOA
-#define UCPD1_VSENSE_Pin GPIO_PIN_11
-#define UCPD1_VSENSE_GPIO_Port GPIOA
 #define SWDIO_Pin GPIO_PIN_13
 #define SWDIO_GPIO_Port GPIOA
 #define I2C2_SCL_Pin GPIO_PIN_10

@@ -75,6 +75,11 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define USER_BTN_Pin GPIO_PIN_13
+#define USER_BTN_GPIO_Port GPIOC
+#define USER_BTN_EXTI_IRQn EXTI13_IRQn
+#define UCPD1_VSENSE_Pin GPIO_PIN_11
+#define UCPD1_VSENSE_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 
